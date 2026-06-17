@@ -1,1 +1,375 @@
+<!DOCTYPE html>
+<!--
+Name: David Kinard
+File: patient-form.html
+Date created: June 17, 2026
+Date updated: June 17, 2026
+Version: 1.0
+Purpose: MIS 3371 Homework 1 patient registration form for Valor Veterans Medical Center.
+-->
 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valor Veterans Medical Center</title>
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon for browser tab -->
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+
+    <!-- ==================== HEADER / BANNER ==================== -->
+    <div id="banner">
+        <div id="logo-area">
+            <!-- Logo saved locally in same folder, no external URL -->
+            <img src="logo.png" alt="Valor Veterans Medical Center logo" id="logo">
+        </div>
+
+        <div id="title-area">
+            <h1>Valor Veterans Medical Center</h1>
+        </div>
+
+        <div id="date-area">
+            <!-- Dynamic date injected via inline JavaScript at bottom of page -->
+            <p>Today is: <span id="today"></span></p>
+        </div>
+    </div>
+    <!-- ==================== END HEADER ==================== -->
+
+
+    <!-- ==================== MAIN FORM CONTAINER ==================== -->
+    <div id="form-container">
+        <h2>Patient Registration Form</h2>
+
+        <!--
+            Form submits to thankyou.html (client-side only).
+            No method attribute per assignment specs.
+        -->
+        <form action="thankyou.html">
+
+            <!-- ---------- Personal Information ---------- -->
+            <h3>Personal Information</h3>
+            <table>
+                <!-- Row 1: Name fields -->
+                <tr>
+                    <td><label for="firstname">First Name:</label></td>
+                    <td><input type="text" id="firstname" name="firstname" maxlength="30" required></td>
+
+                    <td><label for="middleinit">MI:</label></td>
+                    <td><input type="text" id="middleinit" name="middleinit" maxlength="1"></td>
+
+                    <td><label for="lastname">Last Name:</label></td>
+                    <td><input type="text" id="lastname" name="lastname" maxlength="30" required></td>
+                </tr>
+
+                <!-- Row 2: DOB, SSN, Gender -->
+                <tr>
+                    <td><label for="dob">Date of Birth:</label></td>
+                    <td><input type="text" id="dob" name="dob" placeholder="MM/DD/YYYY" maxlength="10" required></td>
+
+                    <td><label for="ssn">SSN:</label></td>
+                    <td><input type="password" id="ssn" name="ssn" placeholder="XXX-XX-XXXX" maxlength="11" required></td>
+
+                    <td>Gender:</td>
+                    <td>
+                        <!-- Radio button set 1: Gender -->
+                        <input type="radio" id="male" name="gender" value="Male" required>
+                        <label for="male">Male</label>
+
+                        <input type="radio" id="female" name="gender" value="Female">
+                        <label for="female">Female</label>
+
+                        <input type="radio" id="other" name="gender" value="Other">
+                        <label for="other">Other</label>
+                    </td>
+                </tr>
+            </table>
+
+            <!-- ---------- Contact Information ---------- -->
+            <h3>Contact Information</h3>
+            <table>
+                <!-- Address Line 1 -->
+                <tr>
+                    <td><label for="address1">Address Line 1:</label></td>
+                    <td colspan="5"><input type="text" id="address1" name="address1" maxlength="30" required></td>
+                </tr>
+
+                <!-- Address Line 2 -->
+                <tr>
+                    <td><label for="address2">Address Line 2:</label></td>
+                    <td colspan="5"><input type="text" id="address2" name="address2" maxlength="30"></td>
+                </tr>
+
+                <!-- City, State dropdown, Zip on same row -->
+                <tr>
+                    <td><label for="city">City:</label></td>
+                    <td><input type="text" id="city" name="city" maxlength="30" required></td>
+
+                    <td><label for="state">State:</label></td>
+                    <td>
+                        <!-- State dropdown: all 50 states + DC + PR, TX pre-selected -->
+                        <select id="state" name="state" required>
+                            <option value="">Select</option>
+                            <option value="AL">AL</option>
+                            <option value="AK">AK</option>
+                            <option value="AZ">AZ</option>
+                            <option value="AR">AR</option>
+                            <option value="CA">CA</option>
+                            <option value="CO">CO</option>
+                            <option value="CT">CT</option>
+                            <option value="DE">DE</option>
+                            <option value="DC">DC</option>
+                            <option value="FL">FL</option>
+                            <option value="GA">GA</option>
+                            <option value="HI">HI</option>
+                            <option value="ID">ID</option>
+                            <option value="IL">IL</option>
+                            <option value="IN">IN</option>
+                            <option value="IA">IA</option>
+                            <option value="KS">KS</option>
+                            <option value="KY">KY</option>
+                            <option value="LA">LA</option>
+                            <option value="ME">ME</option>
+                            <option value="MD">MD</option>
+                            <option value="MA">MA</option>
+                            <option value="MI">MI</option>
+                            <option value="MN">MN</option>
+                            <option value="MS">MS</option>
+                            <option value="MO">MO</option>
+                            <option value="MT">MT</option>
+                            <option value="NE">NE</option>
+                            <option value="NV">NV</option>
+                            <option value="NH">NH</option>
+                            <option value="NJ">NJ</option>
+                            <option value="NM">NM</option>
+                            <option value="NY">NY</option>
+                            <option value="NC">NC</option>
+                            <option value="ND">ND</option>
+                            <option value="OH">OH</option>
+                            <option value="OK">OK</option>
+                            <option value="OR">OR</option>
+                            <option value="PA">PA</option>
+                            <option value="PR">PR</option>
+                            <option value="RI">RI</option>
+                            <option value="SC">SC</option>
+                            <option value="SD">SD</option>
+                            <option value="TN">TN</option>
+                            <option value="TX" selected>TX</option>
+                            <option value="UT">UT</option>
+                            <option value="VT">VT</option>
+                            <option value="VA">VA</option>
+                            <option value="WA">WA</option>
+                            <option value="WV">WV</option>
+                            <option value="WI">WI</option>
+                            <option value="WY">WY</option>
+                        </select>
+                    </td>
+
+                    <td><label for="zip">Zip Code:</label></td>
+                    <td><input type="text" id="zip" name="zip" placeholder="12345" pattern="\d{5}(-\d{4})?" maxlength="10" required></td>
+                </tr>
+
+                <!-- Phone and Email on same row -->
+                <tr>
+                    <td><label for="phone1">Phone:</label></td>
+                    <td><input type="tel" id="phone1" name="phone1" placeholder="123-456-7890" pattern="\d{3}-\d{3}-\d{4}" maxlength="12" required></td>
+
+                    <td><label for="email">Email:</label></td>
+                    <td colspan="3"><input type="email" id="email" name="email" placeholder="name@domain.com" maxlength="50" required></td>
+                </tr>
+
+                <!-- Preferred contact method dropdown -->
+                <tr>
+                    <td><label for="preferred_contact">Preferred Contact Method:</label></td>
+                    <td>
+                        <select id="preferred_contact" name="preferred_contact">
+                            <option value="phone">Phone</option>
+                            <option value="email" selected>Email</option>
+                            <option value="text">Text</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+
+            <!-- ---------- Account Information ---------- -->
+            <h3>Account Information</h3>
+            <table>
+                <!-- Desired User ID - separate from email per requirements -->
+                <tr>
+                    <td><label for="userid">Desired User ID:</label></td>
+                    <td><input type="text" id="userid" name="userid" maxlength="20" required></td>
+                </tr>
+
+                <!-- Password fields - obscured with type="password" -->
+                <tr>
+                    <td><label for="password">Password:</label></td>
+                    <td><input type="password" id="password" name="password" maxlength="20" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="confirm_password">Confirm Password:</label></td>
+                    <td><input type="password" id="confirm_password" name="confirm_password" maxlength="20" required></td>
+                </tr>
+            </table>
+
+            <!-- ---------- Veteran / Insurance Information ---------- -->
+            <h3>Veteran / Insurance Information</h3>
+            <table>
+                <!-- Branch of service dropdown -->
+                <tr>
+                    <td><label for="branch_service">Branch of Service:</label></td>
+                    <td>
+                        <select id="branch_service" name="branch_service">
+                            <option value="">Select</option>
+                            <option value="Army">Army</option>
+                            <option value="Navy">Navy</option>
+                            <option value="Air Force">Air Force</option>
+                            <option value="Marines">Marines</option>
+                            <option value="Coast Guard">Coast Guard</option>
+                            <option value="Space Force">Space Force</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <!-- Radio button set 2: VA eligibility -->
+                <tr>
+                    <td>Eligible for Veteran Health Benefits?</td>
+                    <td>
+                        <input type="radio" id="va_yes" name="va_eligible" value="Yes">
+                        <label for="va_yes">Yes</label>
+
+                        <input type="radio" id="va_no" name="va_eligible" value="No">
+                        <label for="va_no">No</label>
+                    </td>
+                </tr>
+
+                <!-- Radio button set 3: Service-connected disability -->
+                <tr>
+                    <td>Service-Connected Disability?</td>
+                    <td>
+                        <input type="radio" id="service_yes" name="service_connected" value="Yes">
+                        <label for="service_yes">Yes</label>
+
+                        <input type="radio" id="service_no" name="service_connected" value="No">
+                        <label for="service_no">No</label>
+                    </td>
+                </tr>
+
+                <!-- Radio button set 4: Insurance -->
+                <tr>
+                    <td>Do you have insurance?</td>
+                    <td>
+                        <input type="radio" id="insurance_yes" name="insurance" value="Yes" required>
+                        <label for="insurance_yes">Yes</label>
+
+                        <input type="radio" id="insurance_no" name="insurance" value="No">
+                        <label for="insurance_no">No</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="insurance_company">Insurance Company:</label></td>
+                    <td><input type="text" id="insurance_company" name="insurance_company" maxlength="50"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="policy_number">Policy Number:</label></td>
+                    <td><input type="text" id="policy_number" name="policy_number" maxlength="30"></td>
+                </tr>
+            </table>
+
+            <!-- ---------- Medical Information ---------- -->
+            <h3>Medical Information</h3>
+            <table>
+                <!-- Text area: current symptoms (3 rows x 50 cols per requirements) -->
+                <tr>
+                    <td><label for="symptoms">Current Symptoms:</label></td>
+                    <td>
+                        <textarea id="symptoms" name="symptoms" rows="3" cols="50" required></textarea>
+                    </td>
+                </tr>
+
+                <!-- Radio button set 5: Vaccination status -->
+                <tr>
+                    <td>Have you been vaccinated?</td>
+                    <td>
+                        <input type="radio" id="vaccinated_yes" name="vaccinated" value="Yes" required>
+                        <label for="vaccinated_yes">Yes</label>
+
+                        <input type="radio" id="vaccinated_no" name="vaccinated" value="No">
+                        <label for="vaccinated_no">No</label>
+                    </td>
+                </tr>
+
+                <!-- Checkboxes: medical history (5 options per requirements) -->
+                <tr>
+                    <td>Medical History:</td>
+                    <td>
+                        <input type="checkbox" id="chicken_pox" name="medical_history" value="Chicken Pox">
+                        <label for="chicken_pox">Chicken Pox</label>
+
+                        <input type="checkbox" id="measles" name="medical_history" value="Measles">
+                        <label for="measles">Measles</label>
+
+                        <input type="checkbox" id="covid19" name="medical_history" value="Covid-19">
+                        <label for="covid19">Covid-19</label>
+
+                        <input type="checkbox" id="small_pox" name="medical_history" value="Small Pox">
+                        <label for="small_pox">Small Pox</label>
+
+                        <input type="checkbox" id="tetanus" name="medical_history" value="Tetanus">
+                        <label for="tetanus">Tetanus</label>
+                    </td>
+                </tr>
+
+                <!-- Slide bar: health rating 1-10 -->
+                <tr>
+                    <td><label for="health_rating">Health Rating:</label></td>
+                    <td>
+                        1
+                        <input type="range" id="health_rating" name="health_rating" min="1" max="10" value="5" step="1">
+                        10
+                    </td>
+                </tr>
+            </table>
+
+            <!-- ---------- Form Buttons ---------- -->
+            <div class="button-row">
+                <input type="reset" value="CLEAR AND START OVER">
+                <input type="submit" value="Submit">
+            </div>
+
+        </form>
+    </div>
+    <!-- ==================== END MAIN FORM CONTAINER ==================== -->
+
+
+    <!-- ==================== FOOTER ==================== -->
+    <div id="footer">
+        <p>Valor Veterans Medical Center | Sugar Land, TX</p>
+        <!-- Clickable contact button per requirements -->
+        <a href="mailto:contact@valorveteransmedical.com" class="contact-button">Contact Us</a>
+    </div>
+    <!-- ==================== END FOOTER ==================== -->
+
+
+    <!-- ==================== INLINE JAVASCRIPT ==================== -->
+    <script>
+        /* Dynamically display today's full date in the banner */
+        document.getElementById("today").innerHTML = new Date().toLocaleDateString("en-US", {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+        });
+    </script>
+    <!-- ==================== END JAVASCRIPT ==================== -->
+
+</body>
+</html>
+<!-- ==================== END OF DOCUMENT: patient-form.html ==================== -->
