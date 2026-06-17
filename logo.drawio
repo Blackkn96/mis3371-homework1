@@ -1,0 +1,28 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="8pgowXe3EzsAfs52Iai0">
+    <mxGraphModel dx="1556" dy="858" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="T7zqsiFIt5Vn8UHRC-m4-4" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.loop_limit;whiteSpace=wrap;rotation=-180;fillColor=#FFFF00;" value="" vertex="1">
+          <mxGeometry height="170" width="130" x="365" y="375" as="geometry" />
+        </mxCell>
+        <mxCell id="T7zqsiFIt5Vn8UHRC-m4-1" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.loop_limit;whiteSpace=wrap;rotation=-180;fillColor=#004C99;" value="" vertex="1">
+          <mxGeometry height="160" width="120" x="370" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="T7zqsiFIt5Vn8UHRC-m4-2" parent="1" style="shape=cross;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="110" width="100" x="380" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="T7zqsiFIt5Vn8UHRC-m4-3" parent="1" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.star;fillColor=#FFFF33;" value="" vertex="1">
+          <mxGeometry height="62.5" width="60" x="400" y="428.75" as="geometry" />
+        </mxCell>
+        <mxCell id="T7zqsiFIt5Vn8UHRC-m4-5" parent="1" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.flash" value="" vertex="1">
+          <mxGeometry height="40" width="20" x="450" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="T7zqsiFIt5Vn8UHRC-m4-6" parent="1" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.flash;flipH=1;legacyAnchorPoints=0;" value="" vertex="1">
+          <mxGeometry height="40" width="20" x="390" y="400" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
