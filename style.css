@@ -1,1 +1,266 @@
+/*
+Name: David Kinard
+File: style.css
+Date created: June 17, 2026
+Date updated: June 17, 2026
+Version: 1.0
+Purpose: External stylesheet for Valor Veterans Medical Center patient registration form.
+*/
 
+
+/* ==================== GLOBAL / BODY ==================== */
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    color: #1a1a2e;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ==================== BANNER ==================== */
+
+#banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1b3a6b;
+    padding: 15px 30px;
+    border-bottom: 4px solid #f0c040;
+}
+
+#logo {
+    height: 80px;
+    width: auto;
+}
+
+#title-area h1 {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    color: #f0c040;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#date-area p {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    margin: 0;
+    text-align: right;
+}
+
+
+/* ==================== FORM CONTAINER ==================== */
+
+#form-container {
+    background-color: rgba(255, 255, 255, 0.92);
+    margin: 30px auto;
+    padding: 30px 40px;
+    max-width: 900px;
+    border-radius: 8px;
+    border-top: 5px solid #1b3a6b;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ==================== HEADINGS ==================== */
+
+h2 {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    color: #1b3a6b;
+    border-bottom: 2px solid #f0c040;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-family: Georgia, serif;
+    font-size: 17px;
+    color: #808080;
+    border-left: 4px solid #f0c040;
+    padding-left: 10px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+
+/* ==================== TABLE / FORM LAYOUT ==================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+td {
+    padding: 8px 10px;
+    vertical-align: middle;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #1a1a2e;
+}
+
+label {
+    font-weight: bold;
+    color: #1b3a6b;
+}
+
+
+/* ==================== FORM INPUTS ==================== */
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #1a1a2e;
+    background-color: #f4f8ff;
+    border: 1px solid #1b3a6b;
+    border-radius: 4px;
+    padding: 5px 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #f0c040;
+    background-color: #fffef0;
+}
+
+input[type="range"] {
+    accent-color: #1b3a6b;
+    width: 200px;
+    vertical-align: middle;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: #1b3a6b;
+    margin-right: 4px;
+}
+
+
+/* ==================== BUTTONS ==================== */
+
+.button-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #cccccc;
+}
+
+input[type="reset"] {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #1b3a6b;
+    border: 2px solid #1b3a6b;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="reset"]:hover {
+    background-color: #1b3a6b;
+    color: #ffffff;
+}
+
+input[type="submit"] {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    background-color: #1b3a6b;
+    color: #ffffff;
+    border: 2px solid #1b3a6b;
+    padding: 10px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #f0c040;
+    color: #1b3a6b;
+    border-color: #f0c040;
+}
+
+
+/* ==================== HYPERLINKS ==================== */
+
+a {
+    color: #1b3a6b;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #f0c040;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #4a6fa5;
+}
+
+
+/* ==================== FOOTER ==================== */
+
+#footer {
+    background-color: #1b3a6b;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 30px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    border-top: 4px solid #f0c040;
+    margin-top: 20px;
+}
+
+#footer p {
+    margin: 0 0 10px 0;
+    color: #ffffff;
+}
+
+.contact-button {
+    display: inline-block;
+    background-color: #f0c040;
+    color: #1b3a6b;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.contact-button:hover {
+    background-color: #ffffff;
+    color: #1b3a6b;
+}
+
+.contact-button:visited {
+    color: #1b3a6b;
+}
+
+/* ==================== END OF DOCUMENT: style.css ==================== */
